@@ -4,8 +4,16 @@
 	<title>Java Web Starter Application</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="style.css" />
+	<script type="text/javascript">
+	function strcon(){
+	document.forms[0].empfname.value=document.forms[0].empname.value +document.forms[0].emplname.value;
+	
+	}
+	
+	</script>
 </head>
 <body>
+<form name="test" action="" method="post">
 	<table>
 		<tr>
 			<td style='width: 30%;'>
@@ -19,6 +27,33 @@
 			</td>
 		</tr>
 	</table>
+	<table>
+		<tr>
+			<td style='width: 30%;'>
+			<span class="blue">Name</span>
+			</td>
+			<td>
+				<input type="text" name="empname">
+			</td>
+		</tr>
+		<tr>
+			<td style='width: 30%;'>
+			<span class="blue">Last Name</span>
+			</td>
+			<td>
+				<input type="text" name="emplname">
+			</td>
+		</tr>
+		<tr>
+			<td style='width: 30%;'>
+				<input type="button" value="Action" onclick="strcon()">
+			</td>
+			<td>
+			 <input type="text" name="empfname">
+			</td>
+		</tr>
+	</table>
+	</form>
 	<!-- Call SimpleServlet to get the "Hello World" message  -->
 	<script type="text/javascript" src="index.js"></script>
 </body>
